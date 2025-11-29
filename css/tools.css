@@ -1,0 +1,526 @@
+/**
+ * @package   Churchy - Nonprofit Joomla Template
+ * @version   1.5.1 - 24 January 2016
+ * @author    Webthemer - Web Development Studio http://www.webthemer.com | Framework: YOOtheme http://www.yootheme.com
+ * @copyright Copyright (C) 2012 - 2016 Webthemer | Framework: Copyright (C) YOOtheme GmbH
+ * @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+ */
+
+@import url(../warp/css/tools.css);
+
+/*Buttons (Needed for System Markup)*/
+/*----------------------------------------------------------------------------------------------------
+Buttons Styling */
+.button-default, .button-primary, .button-black
+{
+	padding: 4px 8px;
+	display: inline-block;
+	font-size: 12px;
+	/*+border-radius:2px;*/
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-khtml-border-radius: 2px;
+	border-radius: 2px;
+}
+.button-default, BUTTON, INPUT[type="button"], INPUT[type="submit"], INPUT[type="reset"]
+{
+	border: 1px solid #E0E0E0;
+	color: #444;
+	background-color: #EEEEEE;
+}
+.button-default:hover, .button-primary, BUTTON:hover, FORM.style INPUT[type="button"]:hover, INPUT[type="submit"]:hover, INPUT[type="reset"]:hover
+{
+	border-width: 1px;
+	border-style: solid;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+	color: #FFFFFF;
+	border-color: #D93726;
+	background: #DD4B3C;
+}
+.button-default:active, .button-primary:hover, BUTTON:active, INPUT[type="button"]:active, INPUT[type="submit"]:active, INPUT[type="reset"]:active
+{
+	color: #FFF;
+	border-color: #AD2B1E;
+	background-color: #C33122;
+}
+.button-primary:active
+{
+	border-color: #812016;
+	background-color: #AD2B1E;
+}
+.button-black
+{
+	border: 1px solid #444444;
+	background: #48484C;
+	color: #DFDFDF;
+}
+.button-black:hover
+{
+	border: 1px solid #2A2A2A;
+	background: #2A2A2A;
+	color: #DFDFDF;
+}
+.button-black:active
+{
+	border: 1px solid #101010;
+	background: #101010;
+	color: #DFDFDF;
+}
+/*Buttons Size*/
+.button-medium
+{
+	padding: 6px 10px;
+	font-size: 14px;
+}
+.button-big
+{
+	padding: 8px 12px;
+	font-size: 16px;
+}
+.button-huge
+{
+	padding: 10px 14px;
+	font-size: 18px;
+}
+/*Form Buttons*/
+BUTTON, INPUT[type="button"], INPUT[type="submit"], INPUT[type="reset"]
+{
+	padding: 6px 10px;
+	display: inline-block;
+	font-size: 12px;
+	/*+border-radius:2px;*/
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-khtml-border-radius: 2px;
+	border-radius: 2px;
+	line-height: 16px;
+}
+.button-default + [class*=post-edit-link], .button-primary + [class*=post-edit-link]
+{
+	margin-left: 10px;
+}
+BUTTON:hover, INPUT[type="button"]:hover, INPUT[type="submit"]:hover, INPUT[type="reset"]:hover
+{
+	padding: 6px 10px;
+	display: inline-block;
+	font-size: 12px;
+	/*+border-radius:2px;*/
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-khtml-border-radius: 2px;
+	border-radius: 2px;
+}
+/*Images and Objects (Needed for System Markup)
+----------------------------------------------------------------------------------------------------*/
+IMG.border
+{
+	border: 3px solid #EDEDED;
+	/*+box-sizing:border-box;*/
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+IMG.round
+{
+	/*+border-radius:5px;*/
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+}
+IMG.polaroid
+{
+	padding: 4px;
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	/*+box-sizing:border-box;*/
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+IMG.well
+{
+	/*+box-shadow:inset 0px 0px 3px #999999;*/
+	-moz-box-shadow: inset 0px 0px 3px #999999;
+	-webkit-box-shadow: inset 0px 0px 3px #999999;
+	-o-box-shadow: inset 0px 0px 3px #999999;
+	box-shadow: inset 0px 0px 3px #999999;
+	padding: 5px;
+	/*+box-sizing:border-box;*/
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/*Lists and Tables (Needed for System Markup)
+----------------------------------------------------------------------------------------------------
+Line List*/
+UL.line > LI
+{
+	border-top: 1px dotted #E5E5E5;
+}
+UL.line > LI:first-child
+{
+	border: none;
+}
+/*Check List*/
+UL.check > LI
+{
+	padding: 4px 0 0 25px;
+	background: url(../images/tools/list_check.png) no-repeat 0px 8px;
+}
+/*Zebra List and Table*/
+UL.zebra > LI, TABLE.zebra TBODY TD
+{
+	border-bottom: 1px solid #EDEDED;
+	padding: 5px 10px;
+}
+UL.zebra > LI:first-child, TABLE.zebra TBODY TR:first-child TD
+{
+	border-top: 1px solid #EDEDED;
+}
+UL.zebra > LI.odd, TABLE.zebra TBODY TR.odd
+{
+	background: #FAFAFA;
+}
+UL.zebra > LI:nth-of-type(odd), TABLE.zebra TBODY TR:nth-of-type(odd)
+{
+	background: #FAFAFA;
+}
+TABLE.zebra
+{
+	border: 1px solid #DDDDDD;
+	background-color: #EEEEEE;
+}
+TABLE.zebra TH
+{
+	font-size: 16px;
+	padding: 10px;
+}
+TABLE.zebra CAPTION
+{
+	color: #999;
+	padding: 5px;
+}
+/*Definition Lists*/
+DL.separator DT
+{
+	position: relative;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-transform: uppercase;
+}
+/*border code because of RTL*/
+DL.separator DD
+{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-width: 0 0 0 1px;
+	border-style: solid;
+	border-color: #DDD;
+}
+DL.separator DT:before
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	right: -15px;
+	width: 30px;
+	border-top: 1px solid #DDD;
+}
+DL.separator DT:after
+{
+	content: "";
+	position: absolute;
+	top: -3px;
+	right: -3px;
+	width: 5px;
+	height: 5px;
+	background: #FFF;
+	border: 1px solid #DDD;
+	border-radius: 6px;
+}
+DL.separator DT:first-child:before, DL.separator DT:first-child:after
+{
+	display: none;
+}
+/*Text
+----------------------------------------------------------------------------------------------------*/
+BLOCKQUOTE
+{
+	padding: 0 35px;
+	font-size: 16px;
+	line-height: 22px;
+	font-family: Cambria;
+}
+BLOCKQUOTE:before
+{
+	display: block;
+	height: 0;
+	margin-left: -40px;
+	font: italic 400% / 1 Cochin, Georgia, "Times New Roman", serif;
+}
+BLOCKQUOTE:after
+{
+	margin-right: -30px;
+	display: block;
+	height: 0;
+	font: italic 400% / 1 Cochin, Georgia, "Times New Roman", serif;
+	text-align: right;
+	padding-bottom: 15px;
+	margin-top: -20px;
+}
+/*Inline Text Box*/
+EM.box
+{
+	border: 1px dotted #BBB;
+	background: #FAFAFA;
+	color: #444;
+}
+/*Horizontal Rules*/
+HR
+{
+	height: 1px;
+	border: 1px solid #DFDFDF;
+	border-top: none;
+	position: relative;
+}
+HR.dotted
+{
+	background: url(../images/tools/line_dotted.png) repeat-x left center;
+	height: 1px;
+	border: none;
+	/*+box-shadow:none;*/
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+}
+HR.hr-1
+{
+	background: url(../images/tools/hr_1.png) repeat-x center;
+	height: 6px;
+	border: none;
+	/*+box-shadow:none;*/
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+}
+HR.hr-2
+{
+	background: url(../images/tools/hr_2.png) repeat-x right bottom;
+	height: 6px;
+	border: none;
+	/*+box-shadow:none;*/
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+}
+HR.hr-3
+{
+	background: url(../images/tools/hr_3.png) repeat-x left bottom;
+	height: 6px;
+	border: none;
+	/*+box-shadow:none;*/
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+}
+HR.hr-4
+{
+	background: url(../images/tools/hr_4.png) repeat-x right bottom;
+	height: 6px;
+	border: none;
+	/*+box-shadow:none;*/
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+}
+HR.hr-5
+{
+	background: url(../images/tools/hr_5.png) no-repeat center bottom;
+	height: 9px;
+	border: none;
+	/*+box-shadow:none;*/
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+}
+HR.hr-6
+{
+	background: url(../images/tools/hr_6.png) no-repeat left bottom;
+	height: 9px;
+	border: none;
+	/*+box-shadow:none;*/
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+}
+HR.hr-7
+{
+	background: url(../images/tools/hr_7.png) no-repeat right bottom;
+	height: 9px;
+	border: none;
+	/*+box-shadow:none;*/
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+}
+HR.hr-8:before
+{
+	content: " ";
+	position: absolute;
+	height: 4px;
+	width: 70px;
+	margin-top: -3px;
+}
+HR.hr-9:after
+{
+	content: " ";
+	position: absolute;
+	height: 4px;
+	width: 70px;
+	margin-top: -3px;
+	right: 0px;
+}
+/*HR - 8 and 9 Colors*/
+HR.hr-9:after, HR.hr-8:before
+{
+	background-color: #B20000;
+}
+/*Boxes and Notices
+----------------------------------------------------------------------------------------------------*/
+.box-content
+{
+	background: #FAFAFA;
+	border: 1px solid #DDD;
+	padding: 15px;
+}
+.box-note, .box-info, .box-warning, .box-hint, .box-download
+{
+	background: #FAFAFA;
+	border: 1px solid #DDD;
+}
+.box-info
+{
+	background: #EBF5FA url(../images/tools/box_info.png) no-repeat 0 0;
+	border-color: #D2DCE1;
+}
+.box-warning
+{
+	background: #FFF0EB url(../images/tools/box_warning.png) no-repeat 0 0;
+	border-color: #FFD7CD;
+}
+.box-hint
+{
+	background: #FFFAE6 url(../images/tools/box_hint.png) no-repeat 0 0;
+	border-color: #FAE6BE;
+}
+.box-download
+{
+	background: #FAFFE6 url(../images/tools/box_download.png) no-repeat 0 0;
+	border-color: #DCE6BE;
+}
+.notice
+{
+	background: url(../images/notice-shadow.png) no-repeat center bottom;
+	padding: 10px 0 5px;
+}
+.notice H2
+{
+	color: #222222;
+}
+/*Forms (Needed for System Markup)
+----------------------------------------------------------------------------------------------------*/
+FORM.box FIELDSET
+{
+	padding: 0 25px 0 0;
+	margin-left: 0px;
+}
+FORM.box LEGEND
+{
+	background: #FFFFFF;
+}
+
+form.short input {
+    padding: 7px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+form.short INPUT[type='checkbox'] {
+    padding: 7px;
+    width: inherit;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+/*Pricing Table
+----------------------------------------------------------------------------------------------------*/
+.pricing
+{
+	text-align: center;
+}
+.pricing .grid-box > DIV
+{
+	border-right: 1px solid #DEDEDE;
+	border-left: 1px solid #DEDEDE;
+	border-bottom: 2px solid #DEDEDE;
+	margin-right: 1px;
+	margin-left: 1px;
+	box-sizing: border-box;
+}
+.pricing H2
+{
+	text-align: center;
+	padding: 10px;
+	margin: 0px;
+	color: #FFFFFF;
+	background-color: #222222;
+}
+.pricing .price
+{
+	font-size: 35px;
+	display: inline-block;
+	line-height: 2.1;
+	font-weight: bold;
+	color: #222222;
+}
+.pricing A
+{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+/*Pricing Highlited*/
+.pricing .hightlighted H2
+{
+	background-color: #B20000;
+}
+.pricing .grid-box.hightlighted > DIV
+{
+	border-bottom-color: #B20000;
+}
+
+/*Using highlight.js
+----------------------------------------------------------------------------------------------------*/
+/* PRE Tag */
+PRE {
+    border: 1px solid #DDD;
+    background: transparent;
+    padding: 0;
+    color: inherit;
+}
+
+.hljs {
+    padding: 1em 1.5em !important;
+}

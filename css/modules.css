@@ -1,0 +1,103 @@
+/**
+ * @package   Churchy - Nonprofit Joomla Template
+ * @version   1.5.1 - 24 January 2016
+ * @author    Webthemer - Web Development Studio http://www.webthemer.com | Framework: YOOtheme http://www.yootheme.com
+ * @copyright Copyright (C) 2012 - 2016 Webthemer | Framework: Copyright (C) YOOtheme GmbH
+ * @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+ */
+
+@import url(../warp/css/modules.css);
+
+/*Module Badges*/
+/*----------------------------------------------------------------------------------------------------*/
+.module .badge
+{
+	width: 32px;
+	height: 22px;
+	background: url(../images/module_badges.png) no-repeat 0 0;
+}
+.module .badge-hot
+{
+	background-position: 0 0;
+}
+.module .badge-top
+{
+	background-position: 0 -25px;
+}
+.module .badge-free
+{
+	background-position: 0 -50px;
+}
+.module .badge-new
+{
+	background-position: 0 -75px;
+}
+/*Module Icons
+----------------------------------------------------------------------------------------------------*/
+.module .module-title .icon
+{
+	background: url(../images/module_icons.png) no-repeat 0 0;
+}
+.module .module-title .icon-download
+{
+	background-position: 0 0;
+}
+.module .module-title .icon-twitter
+{
+	background-position: 0 -30px;
+}
+.module .module-title .icon-mail
+{
+	background-position: 0 -60px;
+}
+.module .module-title .icon-bubble
+{
+	background-position: 0 -90px;
+}
+.module .module-title .icon-login
+{
+	background-position: 0 -120px;
+}
+.module .module-title .icon-cart
+{
+	background-position: 0 -150px;
+}
+/*Module Type: Box
+----------------------------------------------------------------------------------------------------*/
+.mod-box
+{
+	padding: 25px;
+}
+.mod-box .badge
+{
+	top: 28px;
+	right: 25px;
+}
+#sidebar-a .mod-box .badge, #sidebar-b .mod-box .badge
+{
+	top: 15px;
+	right: 25px;
+}
+#sidebar-a .mod-box, #sidebar-b .mod-box
+{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+/*Module Style
+----------------------------------------------------------------------------------------------------*/
+.module-title
+{
+	border-bottom: 1px solid #B20000;
+	padding-bottom: 15px;
+	position: relative;
+}
+.module-title:after
+{
+	content: " ";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: #B20000;
+	width: 25%;
+	height: 2px;
+}

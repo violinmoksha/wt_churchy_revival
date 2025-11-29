@@ -1,0 +1,241 @@
+/**
+ * @package   Churchy - Nonprofit Joomla Template
+ * @version   1.5.1 - 24 January 2016
+ * @author    Webthemer - Web Development Studio http://www.webthemer.com | Framework: YOOtheme http://www.yootheme.com
+ * @copyright Copyright (C) 2012 - 2016 Webthemer | Framework: Copyright (C) YOOtheme GmbH
+ * @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+ */
+
+@import url(../../../warp/css/rtl.css);
+
+/*Layout*/
+/*----------------------------------------------------------------------------------------------------*/
+#totop-scroller
+{
+	right: auto;
+	left: 0;
+}
+#headerbar .module
+{
+	max-width: none;
+	padding-left: 35px;
+}
+#sidebar-a UL.line > LI, #sidebar-b UL.line > LI
+{
+	padding-left: 0;
+	background: url(../images/rtl/line_arrow.png) no-repeat 100% 70%;
+	padding-right: 25px;
+}
+#sidebar-a UL.line > LI:hover, #sidebar-b UL.line > LI:hover
+{
+	background-image: url(../images/rtl/line_arrow_hover.png);
+}
+#sidebar-a UL.line > LI:first-child, #sidebar-b UL.line > LI:first-child
+{
+	border: none;
+	/*+box-shadow:none;*/
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+	background-position: right center;
+}
+#bottom-b UL.line > LI A:hover
+{
+	background-image: url(../images/rtl/bottom_line_hover.png);
+}
+#bottom-b UL.line > LI A
+{
+	padding-right: 25px;
+	background: url(../images/rtl/bottom_line.png) no-repeat 99% 3px;
+	padding-left: 0px;
+}
+#bottom-b UL.line > LI:first-child
+{
+	border: none;
+	/*+box-shadow:none;*/
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+	background-position: 100% 48%;
+}
+/*Menus
+----------------------------------------------------------------------------------------------------
+Mega Drop-Down Menu*/
+.menu-dropdown LI.level1 A.level1.parent, .menu-dropdown LI.parent SPAN.level1.parent
+{
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMS8wNC8xMgx3K3AAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzbovLKMAAAAKElEQVQImWP8//8/AxL4z8DAwAjjMDHgAXglWaBGoRsNl2REk6CCnQAySgcOlAz1yAAAAABJRU5ErkJggg==) no-repeat 10% 56%;
+	padding-left: 15px;
+	padding-right: 0;
+}
+/*Sidebar/Accordion Menu*/
+.menu-sidebar LI.parent .level1 > SPAN
+{
+	background-image: url(../images/rtl/menu_sidebar_parent.png);
+	background-position: 0 0;
+}
+.menu-sidebar LI.parent.active .level1 > SPAN
+{
+	background-position: 0 -30px;
+}
+.menu-sidebar UL.level2 UL
+{
+	padding-left: 0;
+	padding-right: 10px;
+}
+/*Line Menu*/
+.menu-line LI
+{
+	margin-left: 0;
+	padding-left: 0;
+	margin-right: 7px;
+	padding-right: 8px;
+	background-position: 100% 50%;
+}
+.menu-line LI:first-child
+{
+	margin-right: 0;
+	padding-right: 0;
+}
+/*Modules
+----------------------------------------------------------------------------------------------------*/
+.mod-box .badge
+{
+	right: auto;
+	left: 25px;
+}
+.module-title:after
+{
+	right: 0;
+}
+/*Tools
+----------------------------------------------------------------------------------------------------
+Check List*/
+UL.check > LI
+{
+	padding-left: 0;
+	padding-right: 30px;
+	background-position: 100% 6px;
+}
+/*Definition Lists*/
+DL.separator DD
+{
+	border-width: 0 1px 0 0;
+}
+DL.separator DT:before
+{
+	right: auto;
+	left: -15px;
+}
+DL.separator DT:after
+{
+	right: auto;
+	left: -3px;
+}
+/*System
+----------------------------------------------------------------------------------------------------
+Search Box*/
+.searchbox
+{
+	background-position: 100% 50%;
+}
+.searchbox .results
+{
+	right: auto;
+	left: -1px;
+}
+/*Breadcrumgs*/
+.breadcrumbs A, .breadcrumbs > SPAN
+{
+	padding-right: 0;
+	padding-left: 10px;
+	background-position: 0 50%;
+}
+/*Extensions
+----------------------------------------------------------------------------------------------------*/
+.wk-slideshow-default > DIV .next, .wk-slideshow-default > DIV .prev
+{
+	background: url(../images/widgetkit/buttons_rtl.png) no-repeat 0 25px !important;
+}
+.wk-slideshow-default > DIV .next
+{
+	left: 30px !important;
+	right: auto !important;
+	background-position: 0px 0px !important;
+}
+.wk-slideshow-default > DIV .prev
+{
+	background-position: 0px -25px !important;
+	right: auto !important;
+	left: 60px !important;
+}
+.wk-slideshow-default .nav
+{
+	margin-top: 0;
+	text-align: center;
+	z-index: 999;
+	position: absolute;
+	bottom: 27px;
+	left: 100px;
+	right: auto;
+}
+/*Widgetkit Accordion*/
+.wk-accordion-default .toggler
+{
+	padding: 10px 35px 8px;
+	background: #F3F3F3 url(../images/widgetkit/plus.png) no-repeat 98% 50%;
+}
+#sidebar-a .wk-accordion-default .toggler, #sidebar-b .wk-accordion-default .toggler
+{
+	padding: 10px 30px 8px;
+	background: #F3F3F3 url(../images/widgetkit/plus.png) no-repeat 97% 50%;
+}
+/*RokSprocket - List Accordion*/
+.sprocket-lists-title .indicator
+{
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	margin-top: -8px;
+	display: block;
+	width: 18px;
+	height: 18px;
+	cursor: pointer;
+	text-align: center;
+}
+.sprocket-lists-pagination UL
+{
+	float: none;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.sprocket-lists-arrows .arrow
+{
+	position: relative;
+	display: block;
+	width: 18px;
+	height: 18px;
+	cursor: pointer;
+	float: left;
+	margin-left: 5px;
+}
+.sprocket-lists-arrows .prev
+{
+	right: auto;
+	left: -15px;
+	margin-left: 0;
+	margin-top: 0;
+}
+.sprocket-lists-arrows .next
+{
+	right: auto;
+	left: 15px;
+	margin-right: 0;
+	margin-top: 0;
+}
+/*RokSprocket - Tabs*/
+.sprocket-tabs-nav LI
+{
+	float: left;
+}

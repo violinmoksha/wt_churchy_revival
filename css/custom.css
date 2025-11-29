@@ -1,0 +1,41 @@
+/**
+ * @package   Churchy - Nonprofit Joomla Template
+ * @version   1.5.1 - 24 January 2016
+ * @author    Webthemer - Web Development Studio http://www.webthemer.com | Framework: YOOtheme http://www.yootheme.com
+ * @copyright Copyright (C) 2012 - 2016 Webthemer | Framework: Copyright (C) YOOtheme GmbH
+ * @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+ *
+
+Custom Rules
+----------------------------------------------------------------------------------------------------*/
+.gallery_aboutus .wk-slideset IMG
+{
+	/*+box-sizing:padding-box;*/
+	-webkit-box-sizing: padding-box;
+	-moz-box-sizing: padding-box;
+	-ms-box-sizing: padding-box;
+	box-sizing: padding-box;
+	/*+border-radius:5px;*/
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+}
+.title-image
+{
+	position: relative;
+}
+.title-image H3
+{
+	position: absolute;
+	bottom: -20px;
+	left: 20px;
+	padding: 4px 10px;
+	background-color: #B20000;
+	color: #FFFFFF;
+	/*+border-radius:3px;*/
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+}

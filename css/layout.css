@@ -1,0 +1,231 @@
+/**
+ * @package   Churchy - Nonprofit Joomla Template
+ * @version   1.5.1 - 24 January 2016
+ * @author    Webthemer - Web Development Studio http://www.webthemer.com | Framework: YOOtheme http://www.yootheme.com
+ * @copyright Copyright (C) 2012 - 2016 Webthemer | Framework: Copyright (C) YOOtheme GmbH
+ * @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+ */
+
+@import url(../warp/css/layout.css);
+
+/*Fixed Layout*/
+/*----------------------------------------------------------------------------------------------------*/
+#fixed-page
+{
+	/*+box-sizing:border-box;*/
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	/*+box-shadow:0px 0px 5px #141414;*/
+	-moz-box-shadow: 0px 0px 5px #141414;
+	-webkit-box-shadow: 0px 0px 5px #141414;
+	-o-box-shadow: 0px 0px 5px #141414;
+	box-shadow: 0px 0px 5px #141414;
+}
+/*Base Layout
+----------------------------------------------------------------------------------------------------*/
+#top-a_wrapper, #top-b_wrapper, #innerbottom_wrapper, #innertop_wrapper, #main_wrapper, #bottom-a_wrapper
+{
+	background-color: #FFFFFF;
+}
+#breadcrumbs
+{
+	margin: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#content
+{
+	padding: 0 10px 10px;
+	margin: 15px;
+}
+.main-shadow-top
+{
+	background: url(../images/notice-shadow.png) no-repeat center bottom;
+	padding: 0 0 10px;
+	margin-top: -1px;
+}
+.main-shadow-bottom
+{
+	background: url(../images/notice-shadow.png) no-repeat center bottom;
+	padding: 10px 0 0;
+	margin-top: -1px;
+}
+#sidebar-a, #sidebar-b
+{
+	padding-top: 10px;
+}
+#footer .module
+{
+	margin: 0;
+}
+#bottom-b .module-title, #innerbottom .module-title
+{
+	margin-bottom: 20px;
+}
+/*Toolbar*/
+#toolbar_wrapper
+{
+	background: url(../images/style/top_back.png) repeat;
+	font-size: 11px;
+	color: #666666;
+}
+#toolbar
+{
+	margin-left: 20px;
+	margin-right: 20px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+#toolbar A
+{
+	color: #AFAFAF;
+}
+#toolbar A:hover
+{
+	color: #FFFFFF;
+}
+/*Header and Headerbar*/
+#header_wrapper
+{
+	background: url(../images/style/logo_back.png) repeat;
+	padding: 5px 0;
+}
+#headerbar .module
+{
+	max-width: none;
+	padding-right: 35px;
+}
+#headerbar .headerbar H1, #headerbar .headerbar H2, #headerbar .headerbar H3, #headerbar .headerbar H4, #headerbar .headerbar H5, #headerbar .headerbar H6, #headerbar .headerbar
+{
+	color: #FFFFFF;
+}
+/*Main menu and Menubar*/
+#menubar_wrapper
+{
+	background: url(../images/style/menu_back.png) repeat;
+	border-bottom: 2px solid #AC0000;
+	border-top: 2px solid #AC0000;
+}
+/*Sidebars*/
+#sidebar-a UL.line > LI, #sidebar-b UL.line > LI
+{
+	padding-left: 25px;
+	background: url(../images/line_arrow.png) no-repeat 3px 9px;
+}
+#sidebar-a UL.line > LI:hover, #sidebar-b UL.line > LI:hover
+{
+	background-image: url(../images/line_arrow_hover.png);
+}
+#sidebar-a UL.line > LI:first-child, #sidebar-b UL.line > LI:first-child
+{
+	border: none;
+	/*+box-shadow:none;*/
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+	background-position: 3px 4px;
+}
+#sidebar-a UL.line > LI A, #sidebar-b UL.line > LI A
+{
+	color: #666666;
+}
+#sidebar-a UL.line > LI A:hover, #sidebar-b UL.line > LI A:hover
+{
+	color: #B20000;
+}
+/*Botom B*/
+#bottom-b_wrapper
+{
+	background: url(../images/style/bottomb_back.png) repeat;
+	color: #666666;
+}
+#bottom-b .module-title
+{
+	color: #AFAFAF;
+}
+#bottom-b A
+{
+	color: #AFAFAF;
+}
+#bottom-b A:hover
+{
+	color: #FFFFFF;
+}
+/*- Lists and Table*/
+#bottom-b UL.line > LI
+{
+	border-top: 1px solid #141414;
+	/*+box-shadow:inset 0px 1px #2C2C2C;*/
+	-moz-box-shadow: inset 0px 1px #2C2C2C;
+	-webkit-box-shadow: inset 0px 1px #2C2C2C;
+	-o-box-shadow: inset 0px 1px #2C2C2C;
+	box-shadow: inset 0px 1px #2C2C2C;
+}
+#bottom-b UL.line > LI:first-child
+{
+	border: none;
+	/*+box-shadow:none;*/
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+}
+#bottom-b UL.line > LI A
+{
+	padding-left: 20px;
+	background: url(../images/bottom_line.png) no-repeat 0px 3px;
+}
+#bottom-b UL.zebra > LI, #bottom-b TABLE.zebra TBODY TD
+{
+	border-bottom: 1px solid #191919;
+	padding: 5px 10px;
+}
+#bottom-b UL.zebra > LI:first-child, #bottom-b TABLE.zebra TBODY TR:first-child TD
+{
+	border-top: 1px solid #191919;
+}
+#bottom-b UL.zebra > LI.odd, #bottom-b TABLE.zebra TBODY TR.odd
+{
+	background: #272727;
+}
+#bottom-b UL.zebra > LI:nth-of-type(odd), #bottom-b TABLE.zebra TBODY TR:nth-of-type(odd)
+{
+	background: #272727;
+}
+/*Footer*/
+#footer_wrapper
+{
+	background: url(../images/style/footer_back.png) repeat;
+	font-size: 11px;
+	color: #666666;
+}
+#footer
+{
+	margin-left: 20px;
+	margin-right: 20px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+#footer A
+{
+	color: #AFAFAF;
+}
+#footer A:hover
+{
+	color: #FFFFFF;
+}
+#totop-scroller
+{
+	display: block;
+	position: absolute;
+	bottom: 5px;
+	right: 50%;
+	z-index: 1;
+	width: 20px;
+	height: 20px;
+	background: url(../images/totop_scroller.png) no-repeat 50% 50%;
+	text-decoration: none;
+}

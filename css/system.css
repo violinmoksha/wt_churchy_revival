@@ -1,0 +1,78 @@
+/**
+ * @package   Churchy - Nonprofit Joomla Template
+ * @version   1.5.1 - 24 January 2016
+ * @author    Webthemer - Web Development Studio http://www.webthemer.com | Framework: YOOtheme http://www.yootheme.com
+ * @copyright Copyright (C) 2012 - 2016 Webthemer | Framework: Copyright (C) YOOtheme GmbH
+ * @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+ */
+
+@import url(../warp/css/system.css);
+@import url(../warp/systems/joomla/css/system.css);
+@import url(system-all.css);
+
+
+/*Items (Addition)*/
+/*----------------------------------------------------------------------------------------------------*/
+#system .items .leading .item
+{
+	padding-bottom: 12px;
+	margin-bottom: 18px;
+	border-bottom: 1px solid #DDD;
+}
+#system .item .icon
+{
+	padding-top: 10px;
+}
+
+span.icon-envelope {
+    padding-left: 5px;
+}
+
+span.icon-print, span.icon-envelope {
+    padding-right: 5px;
+}
+
+/*Item List
+----------------------------------------------------------------------------------------------------*/
+#system .item-list
+{
+}
+/*Search
+----------------------------------------------------------------------------------------------------*/
+#system SPAN.highlight
+{
+	background-color: #FFFFAA;
+}
+/*Contact Us
+----------------------------------------------------------------------------------------------------*/
+#system FORM.submission DIV.submit
+{
+	margin-top: -20px;
+	text-align: left;
+}
+#system FORM.submission FIELDSET > DIV > INPUT[type='text'], #system FORM.submission FIELDSET > DIV > INPUT[type='email'], #system FORM.submission FIELDSET > DIV > INPUT[type='password']
+{
+	padding: 5px;
+	width: 350px;
+}
+#system FORM.submission FIELDSET > DIV > TEXTAREA
+{
+	width: 450px;
+}
+
+/* Category Module Styling */
+ul.category-module, ul.categories-module {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.category-module li, ul.categories-module li {
+    border-bottom: 1px dotted #E5E5E5;
+    margin-top: 15px;
+}
+
+ul.categories-module li h4 {
+    font-size: 13px;
+    margin: 10px 0px;
+}

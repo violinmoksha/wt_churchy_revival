@@ -1,0 +1,110 @@
+/**
+ * @package   Churchy - Nonprofit Joomla Template
+ * @version   1.5.1 - 24 January 2016
+ * @author    Webthemer - Web Development Studio http://www.webthemer.com | Framework: YOOtheme http://www.yootheme.com
+ * @copyright Copyright (C) 2012 - 2016 Webthemer | Framework: Copyright (C) YOOtheme GmbH
+ * @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+ */
+@import url(../warp/css/base.css);
+
+/*Base Styling*/
+/*----------------------------------------------------------------------------------------------------*/
+BODY
+{
+	font: normal 12px / 18px Arial, Helvetica, sans-serif;
+	color: #666666;
+}
+
+/*Header Tags*/
+H1, H2, H3, H4, H5, H6
+{
+	color: #222222;
+}
+H1
+{
+	font-size: 32px;
+	line-height: 1.4;
+}
+H2
+{
+	font-size: 28px;
+	line-height: 1.4;
+}
+H3
+{
+	font-size: 21px;
+	line-height: 1.4;
+}
+H4
+{
+	font-size: 16px;
+	line-height: 1.4;
+}
+H5, H6
+{
+	font-size: 14px;
+	line-height: 1.4;
+}
+/*Links*/
+A
+{
+	color: #B20000;
+}
+A:hover
+{
+	color: #222222;
+}
+/*Colors*/
+.primary-color
+{
+	color: #B20000;
+}
+.secondary-color
+{
+	color: #222222;
+}
+/*Other Html Elements*/
+ADDRESS
+{
+	display: block;
+	margin-bottom: 20px;
+	font-style: normal;
+	line-height: 18px;
+}
+INS, MARK
+{
+	background-color: #FFA;
+}
+MARK
+{
+	color: #111111;
+}
+PRE
+{
+    border: 1px solid #DDD;
+    background: #FAFAFA;
+    padding: 15px 20px;
+    color: #2B2D30;
+}
+CODE
+{
+    padding: 1px 3px;
+    /*+border-radius:3px;*/
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    color: #DD1111;
+    background-color: #F7F7F9;
+    border: 1px solid #E1E1E8;
+}
+::-moz-selection
+{
+	background: #B20000;
+	color: #FFF;
+}
+::selection
+{
+	background: #B20000;
+	color: #FFF;
+}

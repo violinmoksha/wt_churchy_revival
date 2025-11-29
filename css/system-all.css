@@ -1,0 +1,269 @@
+/**
+ * @package   Churchy - Nonprofit Joomla Template
+ * @version   1.5.1 - 24 January 2016
+ * @author    Webthemer - Web Development Studio http://www.webthemer.com | Framework: YOOtheme http://www.yootheme.com
+ * @copyright Copyright (C) 2012 - 2016 Webthemer | Framework: Copyright (C) YOOtheme GmbH
+ * @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+ *
+
+General
+----------------------------------------------------------------------------------------------------*/
+#system .title A
+{
+	display: inline-block;
+}
+#system SMALL
+{
+	color: #999999;
+}
+/*Item
+----------------------------------------------------------------------------------------------------*/
+#system .item HEADER
+{
+	border-bottom: 1px solid #E6E6E6;
+	padding-bottom: 10px;
+}
+#system .item > HEADER .subtitle
+{
+	color: #777;
+}
+#system .item .meta_links
+{
+	position: relative;
+	height: 45px;
+}
+#system .item .meta_links > .meta
+{
+	margin: 20px 0 0;
+	font-size: 11px;
+	line-height: 15px;
+	color: #999;
+	text-align: left;
+	padding: 0 0 10px;
+}
+#system .item .meta_links > .links
+{
+	border-bottom: 1px solid #EEEEEE;
+	position: absolute;
+	right: 0;
+	bottom: -15px;
+	width: 100%;
+	text-align: right;
+	/*[empty]margin-bottom:;*/
+}
+#system .item .meta_links > .links A
+{
+	background-color: #EEEEEE;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 7px 10px;
+	margin-right: 0px;
+	color: #333333;
+	/*[empty]width:;*/
+}
+#system .item .meta_links > .links:hover
+{
+	border-bottom: 1px solid #B20000;
+	margin-top: 0px;
+}
+#system .item .meta_links > .links A:hover
+{
+	background-color: #D94130;
+	color: #FFFFFF;
+}
+/*Items
+----------------------------------------------------------------------------------------------------*/
+#system .items .item:first-child
+{
+	margin-top: 0;
+	padding-top: 10px;
+	border-width: 0;
+}
+#system .items .item
+{
+	padding-top: 25px;
+	position: relative;
+}
+#system .items .item .intro-image
+{
+	margin-bottom: 15px;
+}
+#system .items .item .socialbuttons
+{
+	border-bottom: 1px solid #EEEEEE;
+	padding-bottom: 10px;
+}
+/*Pagination
+----------------------------------------------------------------------------------------------------*/
+#system .pagination
+{
+	margin-top: 30px;
+}
+#system .pagination A, #system .pagination STRONG
+{
+	background-color: #EEEEEE;
+	text-align: center;
+	vertical-align: middle;
+	margin-left: 10px;
+	font-size: 11px;
+	color: #444444;
+	padding: 2px 8px;
+}
+#system .pagination A:hover
+{
+	background-color: #B20000;
+	color: #FFFFFF;
+}
+#system .pagination STRONG
+{
+	background-color: #B20000;
+	text-align: center;
+	vertical-align: middle;
+	margin-left: 7px;
+	font-size: 11px;
+	color: #FFFFFF;
+}
+/*Search Box
+----------------------------------------------------------------------------------------------------*/
+.searchbox
+{
+	width: 100%;
+	height: 34px;
+	padding: 0 25px;
+	border: 1px solid #DDDDDD;
+	background: url(../images/searchbox_magnifier.png) no-repeat;
+	/*+box-sizing:border-box;*/
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	/*+border-radius:3px;*/
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+}
+.searchbox INPUT
+{
+	height: 33px;
+	color: #333;
+	font-size: 12px;
+}
+.searchbox INPUT:-moz-placeholder
+{
+	color: #999;
+}
+.searchbox INPUT::-webkit-input-placeholder
+{
+	color: #999;
+}
+.searchbox INPUT.placeholder
+{
+	color: #999;
+}
+.searchbox.filled BUTTON
+{
+	width: 25px;
+	background: url(../images/searchbox_reset.png) no-repeat 50% 50%;
+}
+.searchbox.loading BUTTON
+{
+	background: url(../images/searchbox_loader.gif) no-repeat 50% 50%;
+}
+/*Drop-Down Results*/
+.searchbox .results
+{
+	top: 30px;
+	right: -1px;
+	width: 300px;
+	border: 1px solid #DDD;
+	background: #FFFFFF;
+}
+.searchbox .results LI.results-header
+{
+	border-bottom: 1px solid #DDD;
+}
+.searchbox .results LI.more-results
+{
+	border-top: 1px solid #DDD;
+}
+.searchbox .results LI.result
+{
+	border-top: 1px solid #EEE;
+}
+.searchbox .results LI.results-header + LI.result
+{
+	border-top: none;
+}
+.searchbox .results LI.result.selected
+{
+	background-color: #FAFAFA;
+}
+/*Breadcrumbs
+----------------------------------------------------------------------------------------------------*/
+.breadcrumbs A, .breadcrumbs > SPAN
+{
+	padding-right: 10px;
+	background: url(../images/breadcrumbs.png) no-repeat 100% 50%;
+}
+/*Author Box
+----------------------------------------------------------------------------------------------------*/
+#system .author-box
+{
+	padding: 10px 13px;
+	border: 1px solid #DDD;
+	background: #FAFAFA;
+}
+#system .author-box .avatar
+{
+	padding: 3px;
+	border: 1px solid #DDD;
+	background: #FFF;
+}
+#system .author-box .name
+{
+	color: #444;
+}
+/*Comments
+----------------------------------------------------------------------------------------------------
+Head*/
+#system #comments .comment-head
+{
+	padding: 5px;
+	border: 1px solid #E6E6E6;
+	background: #FAFAFA;
+}
+#system #comments .comment-byadmin .comment-head
+{
+	border: 1px solid #DCE6BE;
+	background: #FAFFE6;
+}
+#system #comments .comment-head .author
+{
+	text-shadow: 1px 1px 0 rgba(255, 255, 255, 1);
+}
+/*Body*/
+#system #comments UL.level1 UL
+{
+	background: url(../images/comments_arrow.png) no-repeat 0 0;
+}
+/*Respond*/
+#system #respond H3
+{
+	color: #444;
+}
+/*Latest Comments
+----------------------------------------------------------------------------------------------------*/
+.comments-list > ARTICLE
+{
+	border-top: 1px solid #DDD;
+}
+.comments-list > ARTICLE:first-child
+{
+	border: none;
+}
+.comments-list .meta
+{
+	color: #999;
+}

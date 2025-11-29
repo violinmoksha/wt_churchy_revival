@@ -1,0 +1,247 @@
+/**
+ * @package   Churchy - Nonprofit Joomla Template
+ * @version   1.5.1 - 24 January 2016
+ * @author    Webthemer - Web Development Studio http://www.webthemer.com | Framework: YOOtheme http://www.yootheme.com
+ * @copyright Copyright (C) 2012 - 2016 Webthemer | Framework: Copyright (C) YOOtheme GmbH
+ * @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+ */
+
+/*Widgetkit Accordion*/
+/*----------------------------------------------------------------------------------------------------*/
+.wk-accordion-default .toggler
+{
+	/*+border-radius:0;*/
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	-khtml-border-radius: 0;
+	border-radius: 0;
+	font-size: 16px;
+	font-family: Arial;
+	padding: 10px 35px 8px;
+	background: #F3F3F3 url(../images/widgetkit/plus.png) no-repeat 10px 50%;
+	border: none;
+	/*+text-shadow:none;*/
+	-moz-text-shadow: none;
+	-webkit-text-shadow: none;
+	-o-text-shadow: none;
+	text-shadow: none;
+}
+.wk-accordion-default .toggler.active
+{
+	background-image: url(../images/widgetkit/minus.png);
+}
+.wk-accordion-default .wk-content
+{
+	padding: 0 10px 10px;
+}
+/*Sidebar Accordion*/
+#sidebar-a .wk-accordion-default .toggler, #sidebar-b .wk-accordion-default .toggler
+{
+	/*+border-radius:0;*/
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	-khtml-border-radius: 0;
+	border-radius: 0;
+	font-size: 12px;
+	font-family: Arial;
+	padding: 10px 30px 8px;
+	background: #F3F3F3 url(../images/widgetkit/plus.png) no-repeat 7px 50%;
+	border: none;
+	/*+text-shadow:none;*/
+	-moz-text-shadow: none;
+	-webkit-text-shadow: none;
+	-o-text-shadow: none;
+	text-shadow: none;
+}
+#sidebar-a .wk-accordion-default .toggler.active, #sidebar-b .wk-accordion-default .toggler.active
+{
+	background-image: url(../images/widgetkit/minus.png);
+}
+#sidebar-a .wk-accordion-default .wk-content, #sidebar-b .wk-accordion-default .wk-content
+{
+	padding: 0 10px 10px;
+}
+/*Widgetkit Slideshow
+----------------------------------------------------------------------------------------------------*/
+.wk-slideshow-default .caption
+{
+	padding: 0px;
+	margin: 0px 30px 30px;
+	background-color: transparent;
+	/*+box-sizing:border-box;*/
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.wk-slideshow-default .caption H2, .wk-slideshow-default .caption H3
+{
+	padding: 12px 20px;
+	background-color: #B20000;
+	display: inline-block;
+	/*+border-radius:3px;*/
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+	margin: 0px;
+	color: #FFFFFF;
+}
+/*Buttons*/
+.wk-slideshow-default > DIV
+{
+	position: relative;
+}
+.wk-slideshow-default > DIV .next, .wk-slideshow-default > DIV .prev
+{
+	bottom: 25px;
+	width: 25px;
+	height: 25px;
+	margin-top: -25px;
+	background: url(../images/widgetkit/buttons.png) no-repeat 0 25px !important;
+	z-index: 9999;
+}
+.wk-slideshow-default > DIV:hover .next, .wk-slideshow-default > DIV:hover .prev
+{
+	top: auto;
+	bottom: 25px;
+	width: 25px;
+	height: 25px;
+	margin-top: -25px;
+}
+.wk-slideshow-default > DIV .next
+{
+	right: 30px !important;
+	background-position: 0px 0px !important;
+}
+.wk-slideshow-default > DIV .prev
+{
+	background-position: 0px -25px !important;
+	left: auto !important;
+	right: 60px !important;
+}
+.wk-slideshow-default > DIV .prev:hover
+{
+	background-position: -50px -25px !important;
+}
+.wk-slideshow-default > DIV .next:hover
+{
+	background-position: -50px 0px !important;
+}
+.wk-slideshow-default > DIV .next:active
+{
+	background-position: -25px 0px !important;
+}
+.wk-slideshow-default > DIV .prev:active
+{
+	background-position: -25px -25px !important;
+}
+/*Navigation*/
+.wk-slideshow-default .nav
+{
+	margin-top: 0;
+	text-align: center;
+	z-index: 999;
+	position: absolute;
+	bottom: 27px;
+	right: 100px;
+}
+.wk-slideshow-default .nav LI
+{
+	display: inline-block;
+	margin-left: 5px;
+}
+.wk-slideshow-default .nav LI:first-child
+{
+	margin-left: 0;
+}
+.wk-slideshow-default .nav SPAN
+{
+	width: 10px;
+	height: 10px;
+	background: url(../images/widgetkit/nav.png) no-repeat 0 0;
+	overflow: hidden;
+}
+.wk-slideshow-default .nav SPAN:hover
+{
+	background-position: 0 -10px;
+}
+.wk-slideshow-default .nav SPAN:active
+{
+	background-position: 0 -20px;
+}
+.wk-slideshow-default .nav .active SPAN
+{
+	background-position: 0 -30px;
+}
+/*Widgetkit Slideshow Tabs
+----------------------------------------------------------------------------------------------------*/
+.wk-slideshow-tabs .nav LI
+{
+	background: #F5F5F5;
+	background: -moz-linear-gradient(top, #FAFAFA, #F5F5F5);
+	background: -webkit-linear-gradient(top, #FAFAFA, #F5F5F5);
+	background: -o-linear-gradient(top, #FAFAFA, #F5F5F5);
+	background: linear-gradient(to bottom, #FAFAFA, #F5F5F5);
+	border-radius: 0;
+}
+.wk-slideshow-tabs .slides-container
+{
+	border: 1px solid #DDD;
+	background: #FFF;
+	border-radius: 0;
+}
+/*Widgetkit Gallery
+----------------------------------------------------------------------------------------------------*/
+.wk-gallery-wall.round > *, .wk-gallery-wall.round > * > IMG, .wk-gallery-wall.round .spotlight > IMG + DIV
+{
+	/*+border-radius:3px;*/
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+}
+/*RS Form Styling
+----------------------------------------------------------------------------------------------------*/
+INPUT.rsform-input-box, TEXTAREA.rsform-text-box
+{
+	padding: 6px;
+	width: 100%;
+	/*+box-sizing:border-box;*/
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+SELECT.rsform-select-box
+{
+	padding: 6px;
+	width: 100%;
+	/*+box-sizing:border-box;*/
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-top: 5px;
+}
+.rsform-description
+{
+	display: block;
+	padding-top: 5px;
+	font-style: italic;
+	font-size: 11px;
+}
+/*Error Notification*/
+.formError
+{
+	display: block;
+	background-color: #FFF0EB;
+	padding: 3px 8px;
+}
+.formRed
+{
+	margin: 15px 0;
+	padding: 10px 10px 10px 42px;
+	background: #FFF0EB url(../images/tools/box_warning.png) no-repeat 1px -2px;
+	border: 1px solid #FFD7CD;
+}

@@ -1,0 +1,253 @@
+/**
+ * @package   Churchy - Nonprofit Joomla Template
+ * @version   1.5.1 - 24 January 2016
+ * @author    Webthemer - Web Development Studio http://www.webthemer.com | Framework: YOOtheme http://www.yootheme.com
+ * @copyright Copyright (C) 2012 - 2016 Webthemer | Framework: Copyright (C) YOOtheme GmbH
+ * @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+ *
+ 
+Green Style
+Base
+----------------------------------------------------------------------------------------------------*/
+A
+{
+	color: #738F45;
+}
+A:hover
+{
+	color: #222222;
+}
+EM
+{
+	color: #69853B;
+}
+INS, MARK
+{
+	background-color: #FFA;
+}
+::-moz-selection
+{
+	background: #7D994F;
+	color: #FFF;
+}
+::selection
+{
+	background: #7D994F;
+	color: #FFF;
+}
+/*Layout
+----------------------------------------------------------------------------------------------------*/
+#toolbar_wrapper
+{
+	background: url(../images/style/top_back.png) repeat;
+	color: #AFAFAF;
+}
+#toolbar A
+{
+	color: #AFAFAF;
+}
+#toolbar A:hover
+{
+	color: #FFFFFF;
+}
+#header_wrapper
+{
+	background: url(../images/style/logo_back.png) repeat;
+}
+#menubar_wrapper
+{
+	background: url(../images/style/menu_back.png) repeat;
+	border-bottom: 2px solid #7D994F;
+	border-top: 2px solid #7D994F;
+}
+#footer_wrapper
+{
+	background: url(../images/style/footer_back.png) repeat;
+	font-size: 11px;
+	color: #666666;
+}
+#footer A
+{
+	color: #666666;
+}
+#footer A:hover
+{
+	color: #AFAFAF;
+}
+#sidebar-a UL.line > LI A:hover, #sidebar-b UL.line > LI A:hover
+{
+	color: #69853B;
+}
+#sidebar-a UL.line > LI:hover, #sidebar-b UL.line > LI:hover
+{
+	background-image: url(../images/line_arrow_hover.png);
+}
+/*Menus
+----------------------------------------------------------------------------------------------------*/
+.menu-dropdown A.level2:hover, .menu-dropdown A.level3:hover
+{
+	color: #738F45;
+}
+.menu-sidebar A:hover, .menu-sidebar LI > SPAN:hover
+{
+	color: #738F45;
+}
+/*Modules
+----------------------------------------------------------------------------------------------------*/
+.module-title
+{
+	border-bottom: 1px solid #7D994F;
+}
+.module-title:after
+{
+	background-color: #7D994F;
+}
+/*Tools
+----------------------------------------------------------------------------------------------------*/
+.button-default:hover, .button-primary, FORM.style BUTTON:hover, FORM.style INPUT[type="button"]:hover, FORM.style INPUT[type="submit"]:hover
+{
+	border-width: 1px;
+	border-style: solid;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+	color: #FFFFFF;
+	border-color: #6F8846;
+	background: #7D994F;
+}
+.button-default:active, .button-primary:hover, FORM.style BUTTON:active, FORM.style INPUT[type="button"]:active, FORM.style INPUT[type="submit"]:active
+{
+	color: #FFF;
+	border-color: #61773D;
+	background-color: #6F8846;
+}
+.button-primary:active
+{
+	border-color: #536634;
+	background-color: #61773D;
+}
+HR.hr-9:after, HR.hr-8:before
+{
+	background-color: #7D994F;
+}
+/* --- Pricing Table*/
+.pricing .hightlighted H2
+{
+	background-color: #7D994F;
+}
+.pricing .grid-box.hightlighted > DIV
+{
+	border-bottom-color: #7D994F;
+}
+/*System
+----------------------------------------------------------------------------------------------------*/
+#system .item .meta_links > .links:hover
+{
+	border-bottom: 1px solid #61773D;
+}
+#system .item .meta_links > .links A:hover
+{
+	background-color: #7D994F;
+	color: #FFFFFF;
+}
+/* --- Pagination*/
+#system .pagination A:hover
+{
+	background-color: #7D994F;
+	color: #FFFFFF;
+}
+#system .pagination STRONG
+{
+	background-color: #738F45;
+	color: #FFFFFF;
+}
+/*Extensions
+----------------------------------------------------------------------------------------------------
+ --- Widgetkit Slideshow*/
+.wk-slideshow-default .caption H2, .wk-slideshow-default .caption H3
+{
+	background-color: #7D994F;
+	color: #FFFFFF;
+}
+.wk-slideshow-default > DIV
+{
+	position: relative;
+}
+.wk-slideshow-default > DIV .next, .wk-slideshow-default > DIV .prev
+{
+	bottom: 25px;
+	width: 25px;
+	height: 25px;
+	margin-top: -25px;
+	background: url(../images/widgetkit/buttons.png) no-repeat 0 25px !important;
+	z-index: 9999;
+}
+.wk-slideshow-default > DIV:hover .next, .wk-slideshow-default > DIV:hover .prev
+{
+	top: auto;
+	bottom: 25px;
+	width: 25px;
+	height: 25px;
+	margin-top: -25px;
+}
+.wk-slideshow-default > DIV .next
+{
+	right: 30px !important;
+	background-position: 0px 0px !important;
+}
+.wk-slideshow-default > DIV .prev
+{
+	background-position: 0px -25px !important;
+	left: auto !important;
+	right: 60px !important;
+}
+.wk-slideshow-default .nav SPAN
+{
+	background: url(../images/widgetkit/nav.png) no-repeat 0 0;
+}
+/* --- ZOO*/
+.yoo-zoo .item .links:hover
+{
+	border-bottom: 1px solid #61773D;
+}
+.yoo-zoo .item .links A:hover
+{
+	background-color: #7D994F;
+	color: #FAFAFA;
+}
+.yoo-zoo .pos-taxonomy LI A:hover
+{
+	border: 1px solid #7D994F;
+	background: #7D994F;
+	color: #FAFAFA;
+}
+/* --- RokSprocket*/
+#main .sprocket-mosaic .sprocket-mosaic-filter UL LI:hover, .sprocket-mosaic .sprocket-mosaic-filter LI:hover, #main .sprocket-mosaic .sprocket-mosaic-order UL LI:hover, .sprocket-mosaic .sprocket-mosaic-order LI:hover
+{
+	background-color: #7D994F;
+	color: #FAFAFA;
+	border: 1px solid #7D994F;
+}
+.sprocket-tabs-panel A.readon SPAN:hover
+{
+	background-color: #7D994F;
+}
+.sprocket-lists-item A.readon SPAN:hover
+{
+	background-color: #7D994F;
+	color: #FFFFFF;
+}
+/*Custom
+----------------------------------------------------------------------------------------------------*/
+.title-image H3
+{
+	background-color: #69853B;
+}
+/*Responsive
+----------------------------------------------------------------------------------------------------*/
+/* Only Phones */
+@media (max-width: 767px) {
+
+	#header-responsive {
+	background:url(../images/style/logo_back.png) repeat;
+	}
+
+}

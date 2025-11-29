@@ -1,0 +1,163 @@
+/**
+ * @package   Churchy - Nonprofit Joomla Template
+ * @version   1.5.1 - 24 January 2016
+ * @author    Webthemer - Web Development Studio http://www.webthemer.com | Framework: YOOtheme http://www.yootheme.com
+ * @copyright Copyright (C) 2012 - 2016 Webthemer | Framework: Copyright (C) YOOtheme GmbH
+ * @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+ */
+
+@import url(../warp/css/menus.css);
+
+/*Mega Drop-Down Menu*/
+/*----------------------------------------------------------------------------------------------------*/
+/*Fancy Scroller*/
+
+.fancy
+{
+	position: absolute;
+	bottom: 0;
+	height: 3px;
+	background-color: #FFFFFF;
+}
+/*Level 1*/
+.menu-dropdown
+{
+	margin: 0 15px;
+}
+.menu-dropdown A.level1 > SPAN, .menu-dropdown SPAN.level1 > SPAN
+{
+	height: 50px;
+	padding: 0 15px;
+	line-height: 50px;
+	color: #FFFFFF;
+	font-size: 19px;
+}
+.menu-dropdown LI.level1 A.level1.parent, .menu-dropdown LI.parent SPAN.level1.parent
+{
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMS8wNC8xMgx3K3AAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzbovLKMAAAAKElEQVQImWP8//8/AxL4z8DAwAjjMDHgAXglWaBGoRsNl2REk6CCnQAySgcOlAz1yAAAAABJRU5ErkJggg==) no-repeat 87% 56%;
+	padding-left: 0;
+	padding-right: 15px;
+}
+/*Set Active*/
+.menu-dropdown LI.active .level1
+{
+	color: #48B;
+}
+/*Set Hover*/
+.menu-dropdown LI.level1:hover .level1, .menu-dropdown LI.remain .level1
+{
+	color: #D50;
+}
+/*Drop-Down*/
+.menu-dropdown .dropdown
+{
+	top: 52px;
+	margin-left: -1px;
+	border-top: none;
+}
+.menu-dropdown .dropdown-bg > DIV
+{
+	padding: 0 7px;
+	background: #FFF;
+	margin-left: 0px;
+	border-left: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+	border-right: 1px solid #DDDDDD;
+}
+/*Level 2*/
+.menu-dropdown LI.level2
+{
+	margin: 0 5px;
+	border-top: 1px solid #EAEAEA;
+}
+.menu-dropdown LI.level2:first-child
+{
+	border: none;
+}
+.menu-dropdown A.level2, .menu-dropdown SPAN.level2
+{
+	color: #444;
+}
+/*Set Hover*/
+.menu-dropdown A.level2:hover
+{
+	color: #D50;
+}
+/*Set Current*/
+.menu-dropdown A.current.level2
+{
+	font-weight: bold;
+}
+/*Set Hover*/
+.menu-dropdown A.level3
+{
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAK6wAACusBgosNWgAAABZ0RVh0Q3JlYXRpb24gVGltZQAwMS8yMS8xM/rEuCoAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzbovLKMAAAAHklEQVQImWP8//8/Ay7AhFOGkCRjeXk5TnMZaWMnAGr5CGqZ4gVTAAAAAElFTkSuQmCC) no-repeat 0% 46%;
+	padding-left: 15px;
+	margin-left: 6px;
+}
+.menu-dropdown A.level3, .menu-dropdown SPAN.level3
+{
+	color: #444;
+}
+.menu-dropdown A.level3:hover
+{
+	color: #D50;
+}
+/*Set Current*/
+.menu-dropdown A.current.level3
+{
+	font-weight: bold;
+}
+/*Sidebar/Accordion Menu
+----------------------------------------------------------------------------------------------------
+Link*/
+.menu-sidebar A, .menu-sidebar LI > SPAN
+{
+	color: #444;
+}
+/*Hover*/
+.menu-sidebar A:hover, .menu-sidebar LI > SPAN:hover
+{
+	color: #B20000;
+}
+/*Current*/
+.menu-sidebar A.current
+{
+	font-weight: bold;
+}
+/*Level 1*/
+.menu-sidebar LI.level1
+{
+	border-top: 1px solid #DDD;
+}
+.menu-sidebar LI.level1:first-child
+{
+	border-top: none;
+}
+.menu-sidebar LI.parent .level1 > SPAN
+{
+	background: url(../images/menu_sidebar_parent.png) no-repeat 100% 0;
+}
+.menu-sidebar LI.parent.active .level1 > SPAN
+{
+	background-position: 100% -30px;
+}
+/*Level 2-4*/
+.menu-sidebar UL.level2 UL
+{
+	padding-left: 10px;
+}
+/*Line Menu
+----------------------------------------------------------------------------------------------------*/
+.menu-line LI
+{
+	margin-left: 7px;
+	padding-left: 8px;
+	background: url(../images/menu_line_item.png) no-repeat 0 50%;
+}
+.menu-line LI:first-child
+{
+	margin-left: 0;
+	padding-left: 0;
+	background: none;
+}
