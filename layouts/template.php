@@ -61,10 +61,86 @@ include($this['path']->path('layouts:template.config.php'));
 			<?php endif; ?>
 		</div>
 	</header>
-	<?php if ($this['modules']->count('top-a')) : ?>
+	<?php if (true) : /* Static slideshow replacing Widgetkit */ ?>
 	<div id="top-a_wrapper">
 		<div class="wrapper clearfix">
-			<section id="top-a" class="grid-block"><?php echo $this['modules']->render('top-a', array('layout'=>$this['config']->get('top-a'))); ?></section>
+			<section id="top-a" class="grid-block">
+				<div class="grid-box width100 grid-h">
+					<div class="module mod-box deepest">
+						<div id="slideshow-homepage" class="wk-slideshow-static">
+							<div class="slides-wrapper">
+								<ul class="slides">
+									<li class="slide active">
+										<article class="wk-content clearfix">
+											<a href="/index.php">
+												<img src="/images/lightbox_images_homepage/CTS-family-camp2023-980px.jpg" alt="Chiang Mai Theological Seminary" width="980" height="300" />
+												<div class="overlay">
+													<h3><span style="color: white;">Chiang Mai Theological Seminary</span></h3>
+												</div>
+											</a>
+										</article>
+									</li>
+									<li class="slide">
+										<article class="wk-content clearfix">
+											<a href="/index.php/blogs/gleanings-from-the-field/256-a-brief-survey-of-thai-bible-translations">
+												<img src="/images/lightbox_images_homepage/bible_thai_john_980_300.jpg" alt="Thai Bible" width="980" height="300" />
+												<div class="overlay">
+													<h3><span style="color: white;">Thai Bible</span></h3>
+												</div>
+											</a>
+										</article>
+									</li>
+									<li class="slide">
+										<article class="wk-content clearfix">
+											<a href="/index.php">
+												<img src="/images/lightbox_images_homepage/skytrain_sunset_bangkok_980_300.jpg" alt="Sunset in Bangkok" width="980" height="300" />
+												<div class="overlay">
+													<h3><span style="color: white;">Sunset in Bangkok</span></h3>
+												</div>
+											</a>
+										</article>
+									</li>
+								</ul>
+								<div class="next" onclick="nextSlide()"></div>
+								<div class="prev" onclick="prevSlide()"></div>
+							</div>
+							<ul class="nav">
+								<li onclick="goToSlide(0)"><span></span></li>
+								<li onclick="goToSlide(1)"><span></span></li>
+								<li onclick="goToSlide(2)"><span></span></li>
+							</ul>
+						</div>
+						<script>
+						let currentSlide = 0;
+						const slides = document.querySelectorAll('#slideshow-homepage .slide');
+						const navDots = document.querySelectorAll('#slideshow-homepage .nav li');
+						
+						function showSlide(n) {
+							slides.forEach(s => s.classList.remove('active'));
+							navDots.forEach(d => d.classList.remove('active'));
+							currentSlide = (n + slides.length) % slides.length;
+							slides[currentSlide].classList.add('active');
+							navDots[currentSlide].classList.add('active');
+						}
+						
+						function nextSlide() {
+							showSlide(currentSlide + 1);
+						}
+						
+						function prevSlide() {
+							showSlide(currentSlide - 1);
+						}
+						
+						function goToSlide(n) {
+							showSlide(n);
+						}
+						
+						// Auto-advance every 5 seconds
+						setInterval(nextSlide, 5000);
+						</script>
+					</div>
+				</div>
+			</section>
 		</div>
 	</div>
 	<?php endif; ?>

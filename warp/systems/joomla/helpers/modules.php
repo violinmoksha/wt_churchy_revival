@@ -6,6 +6,8 @@
 * @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
 */
 
+use Joomla\CMS\Factory;
+
 /*
 	Class: ModulesWarpHelper
 		Module helper class, count/render modules
@@ -30,8 +32,6 @@ class ModulesWarpHelper extends WarpHelper {
 	*/
 	public function __construct() {
 		parent::__construct();
-
-		use Joomla\CMS\Factory;
 
 		// init vars
 		$this->_document = Factory::getDocument();

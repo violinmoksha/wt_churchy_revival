@@ -10,6 +10,17 @@
 // no direct access
 defined('_JEXEC') or die('Restricted access');
 
+// PHP 8.3 / Joomla 6 compatibility: Create class aliases for deprecated J3 classes
+if (!class_exists('JHtml')) {
+	class_alias('Joomla\CMS\HTML\HTMLHelper', 'JHtml');
+}
+if (!class_exists('JText')) {
+	class_alias('Joomla\CMS\Language\Text', 'JText');
+}
+if (!class_exists('JFactory')) {
+	class_alias('Joomla\CMS\Factory', 'JFactory');
+}
+
 // include config	
 include_once(dirname(__FILE__).'/config.php');
 

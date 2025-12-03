@@ -6,6 +6,12 @@
 * @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
 */
 
+use Joomla\CMS\Factory;
+use Joomla\CMS\Uri\Uri;
+use Joomla\CMS\Filesystem\Folder;
+use Joomla\CMS\HTML\HTMLHelper;
+use Joomla\CMS\Language\Text;
+
 /*
 	Class: SystemWarpHelper
 		Joomla! system helper class, provides Joomla! CMS integration (http://www.joomla.org)
@@ -43,10 +49,6 @@ class SystemWarpHelper extends WarpHelper {
 	public function __construct() {
 		parent::__construct();
 
-		use Joomla\CMS\Factory;
-		use Joomla\CMS\Uri\Uri;
-		use Joomla\CMS\Filesystem\Folder;
-
 		// init vars
 		$this->application = Factory::getApplication();
         $this->document    = Factory::getDocument();
@@ -54,7 +56,7 @@ class SystemWarpHelper extends WarpHelper {
         $this->path        = JPATH_ROOT;
         $this->url         = rtrim(Uri::root(false), '/');
         $this->cache_path  = $this->path.'/cache/template';
-        $this->cache_time  = max(Factory::getConfig()->get('cachetime') * 60, 86400)
+        $this->cache_time  = max(Factory::getConfig()->get('cachetime') * 60, 86400);
 
 		// set config or load defaults
 		$file = $this['path']->path('template:config');
@@ -62,7 +64,7 @@ class SystemWarpHelper extends WarpHelper {
 
 		// set cache directory
 		if (!file_exists($this->cache_path)) {
-			Folder::create($this->cache_path);
+			@mkdir($this->cache_path, 0755, true);
 		}
 	}
 
@@ -87,16 +89,13 @@ class SystemWarpHelper extends WarpHelper {
 		// is site ?
 		if ($this->application->isClient('site')) {
 
-			use Joomla\CMS\HTML\HTMLHelper;
-			use Joomla\CMS\Language\Text;
-
 			// set config
 			$this->config->set('language', $this->document->language);
 			$this->config->set('direction', $this->document->direction);
 			$this->config->set('site_url', rtrim(Uri::root(), '/'));
 			$this->config->set('site_name', $this->application->get('sitename'));
 			$this->config->set('datetime', HTMLHelper::_('date', 'now', 'Y-m-d'));
-			$this->config->set('actual_date', HTMLHelper::_('date', 'now', Text::_('DATE_FORMAT_LC')))
+			$this->config->set('actual_date', HTMLHelper::_('date', 'now', Text::_('DATE_FORMAT_LC')));
 			$this->config->set('page_class', trim(preg_replace(array('/columns-(\d+)/', '/columnwidth-(\d+)/'), array('', ''), $this->application->getParams()->get('pageclass_sfx'))));
 
 			// Outdated Browser page ?

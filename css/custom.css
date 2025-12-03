@@ -8,6 +8,9 @@
 
 Custom Rules
 ----------------------------------------------------------------------------------------------------*/
+
+/* Static Slideshow CSS */
+@import url("slideshow.css");
 .gallery_aboutus .wk-slideset IMG
 {
 	/*+box-sizing:padding-box;*/

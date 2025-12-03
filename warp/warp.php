@@ -138,18 +138,22 @@ class Warp implements ArrayAccess {
 	
 	/* ArrayAccess interface implementation */
 
+	#[\ReturnTypeWillChange]
 	public function offsetGet($name)	{
 		return $this->getHelper($name);
 	}
 
+	#[\ReturnTypeWillChange]
 	public function offsetSet($name, $helper) {
 		$this->_helpers[$name] = $helper;
 	}
 
+	#[\ReturnTypeWillChange]
 	public function offsetUnset($name) {
 		unset($this->_helpers[$name]);
 	}
 
+	#[\ReturnTypeWillChange]
 	public function offsetExists($name) {
 		return !empty($this[$name]);
 	}

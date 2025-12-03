@@ -10,6 +10,9 @@
 // no direct access
 defined('_JEXEC') or die('Restricted access');
 
+use Joomla\CMS\Language\Text;
+use Joomla\CMS\Uri\Uri;
+
 // include config	
 include_once(dirname(__FILE__).'/config.php');
 
@@ -18,14 +21,11 @@ $warp = Warp::getInstance();
 
 // set messages
 $title   = $this->title;
-$error   = $this->error->get('code');
-$message = $this->error->get('message');
+$error   = $this->error->getCode();
+$message = $this->error->getMessage();
 
 // set 404 messages
 if ($error == '404') {
-	use Joomla\CMS\Language\Text;
-	use Joomla\CMS\Uri\Uri;
-	
 	$title   = Text::_('TPL_WARP_404_PAGE_TITLE');
 	$message = Text::sprintf('TPL_WARP_404_PAGE_MESSAGE', Uri::root(false), $warp['config']->get('site_name'));
 }

@@ -151,7 +151,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 	<p class="edit"><?php echo JHtml::_('icon.create', $this->category, $this->category->params); ?> <?php echo JText::_('TPL_WARP_CREATE_ARTICLE'); ?></p>
 	<?php  endif; ?>
 
-	<?php if (($this->params->def('show_pagination', 2) == 1  || ($this->params->get('show_pagination') == 2)) && ($this->pagination->get('pages.total') > 1)) : ?>
+	<?php if (($this->params->def('show_pagination', 2) == 1  || ($this->params->get('show_pagination') == 2)) && ($this->pagination->pagesTotal > 1)) : ?>
 	<?php echo $this->pagination->getPagesLinks(); ?>
 	<?php endif; ?>
 
