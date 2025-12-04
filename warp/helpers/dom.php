@@ -188,51 +188,60 @@ class WarpDOMElement extends DOMElement {
 		return $this;
 	}
 	
-	public function before($data) {
-
-		$data = $this->prepareInsert($data);
-		$this->parentNode->insertBefore($data, $this);
-
-		return $this;
-	}
-
-	public function after($data) {
-
-		$data = $this->prepareInsert($data);
-
-		if (isset($this->nextSibling)) {
-			$this->parentNode->insertBefore($data, $this->nextSibling);
+	public function before(...$nodes): void {
+		// Support old Warp usage: before(string)
+		if (count($nodes) === 1 && is_string($nodes[0])) {
+			$data = $this->prepareInsert($nodes[0]);
+			$this->parentNode->insertBefore($data, $this);
 		} else {
-			$this->parentNode->appendChild($data);
+			// Support PHP 8 DOMElement::before(...$nodes)
+			parent::before(...$nodes);
 		}
-
-		return $this;
 	}
 
-	public function prepend($data) {
-
-		$data = $this->prepareInsert($data);
-
-		if (isset($data)) {
-			if ($this->hasChildren()) {
-				$this->insertBefore($data, $this->firstChild);
+	public function after(...$nodes): void {
+		// Support old Warp usage: after(string)
+		if (count($nodes) === 1 && is_string($nodes[0])) {
+			$data = $this->prepareInsert($nodes[0]);
+			if (isset($this->nextSibling)) {
+				$this->parentNode->insertBefore($data, $this->nextSibling);
 			} else {
+				$this->parentNode->appendChild($data);
+			}
+		} else {
+			// Support PHP 8 DOMElement::after(...$nodes)
+			parent::after(...$nodes);
+		}
+	}
+
+	public function prepend(...$nodes): void {
+		// Support old Warp usage: prepend(string)
+		if (count($nodes) === 1 && is_string($nodes[0])) {
+			$data = $this->prepareInsert($nodes[0]);
+			if (isset($data)) {
+				if ($this->hasChildren()) {
+					$this->insertBefore($data, $this->firstChild);
+				} else {
+					$this->appendChild($data);
+				}
+			}
+		} else {
+			// Support PHP 8 DOMElement::prepend(...$nodes)
+			parent::prepend(...$nodes);
+		}
+	}
+
+	public function append(...$nodes): void {
+		// Support old Warp usage: append(string)
+		if (count($nodes) === 1 && is_string($nodes[0])) {
+			$data = $this->prepareInsert($nodes[0]);
+			if (isset($data)) {
 				$this->appendChild($data);
 			}
+		} else {
+			// Support PHP 8 DOMElement::append(...$nodes)
+			parent::append(...$nodes);
 		}
-
-		return $this;
-	}
-
-	public function append($data) {
-
-		$data = $this->prepareInsert($data);
-
-		if (isset($data)) {
-			$this->appendChild($data);
-		}
-
-		return $this;
 	}
 
 	public function wrap($data) {

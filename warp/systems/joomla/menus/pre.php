@@ -30,6 +30,7 @@ class WarpMenuPre extends WarpMenu {
 		$images = strpos($module->parameter->get('class_sfx'), 'images-off') === false;        
 
 		foreach ($element->find('li') as $li) {
+			if (!$li) continue;
 
 			// get menu item
 			if (preg_match('/item-(\d+)/', $li->attr(version_compare(JVERSION, '1.7.0', '>=') ? 'class' : 'id'), $matches)) {
@@ -47,33 +48,47 @@ class WarpMenuPre extends WarpMenu {
 			}
 
 			// set columns and width
-			if (isset($item) && strpos($item->params->get('pageclass_sfx'), 'column') !== false) {
+			$itemParams = isset($item) ? $item->getParams() : null;
+			if ($itemParams && strpos($itemParams->get('pageclass_sfx'), 'column') !== false) {
 
-				if (preg_match('/columns-(\d+)/', $item->params->get('pageclass_sfx'), $matches)) {
+				if (preg_match('/columns-(\d+)/', $itemParams->get('pageclass_sfx'), $matches)) {
 					$li->attr('data-menu-columns', $matches[1]);
 				}
 				
-				if (preg_match('/columnwidth-(\d+)/', $item->params->get('pageclass_sfx'), $matches)) {
+				if (preg_match('/columnwidth-(\d+)/', $itemParams->get('pageclass_sfx'), $matches)) {
 					$li->attr('data-menu-columnwidth', $matches[1]);
 				}
 				
 			}
 			
 			// set image
-			if (isset($item) && $images && ($image = $item->params->get('menu_image'))) {
+			if ($itemParams && $images && ($image = $itemParams->get('menu_image'))) {
 				if ($image != -1) {
 					$li->attr('data-menu-image', JURI::base().$image);
 				}
 			}
 			
 			// set title span and clean empty text nodes
-			foreach ($li->children('a,span') as $child) {
-				$child->html(sprintf('<span>%s</span>', trim($child->text())));
+			if (!$li || !method_exists($li, 'children')) continue;
+			$children = $li->children('a,span');
+			if ($children) {
+				foreach ($children as $child) {
+					if ($child && method_exists($child, 'html')) {
+						$child->html(sprintf('<span>%s</span>', trim($child->text())));
+					}
+				}
 			}
 
 			$li->removeAttr('id')->removeAttr('class');
+		}	
+
+		// Remove Joomla 6 menu toggle buttons that aren't needed for Warp theme
+		foreach ($element->find('button.mod-menu__toggle-sub') as $button) {
+			if ($button) {
+				$button->remove();
+			}
 		}
-				
+		
 		return $element;
 	}
 
