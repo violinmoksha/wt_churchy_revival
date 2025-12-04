@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 $params = &$this->item->params;
 JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 JHtml::_('behavior.tooltip');
-JHtml::_('behavior.framework');
+// JHtml::_('behavior.framework');
 
 $user = JFactory::getUser();
 

@@ -10,7 +10,7 @@ defined('_JEXEC') or die;
 
 JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 JHtml::_('bootstrap.tooltip');
-JHtml::_('behavior.framework');
+// JHtml::_('behavior.framework');
 
 // Get the user object.
 $user = JFactory::getUser();
