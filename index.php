@@ -20,6 +20,9 @@ if (!class_exists('JText')) {
 if (!class_exists('JFactory')) {
 	class_alias('Joomla\CMS\Factory', 'JFactory');
 }
+if (!class_exists('JLayoutFile')) {
+	class_alias('Joomla\CMS\Layout\FileLayout', 'JLayoutFile');
+}
 
 // include config	
 include_once(dirname(__FILE__).'/config.php');

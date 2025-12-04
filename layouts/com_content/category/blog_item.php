@@ -15,7 +15,7 @@ $params		= &$this->item->params;
 $images		= json_decode($this->item->images);
 $canEdit	= $this->item->params->get('access-edit');
 JHtml::addIncludePath(JPATH_COMPONENT.'/helpers/html');
-JHtml::_('behavior.tooltip');
+JHtml::_('bootstrap.tooltip');
 JHtml::_('behavior.framework');
 
 if (isset($images->image_intro) and !empty($images->image_intro)) {
