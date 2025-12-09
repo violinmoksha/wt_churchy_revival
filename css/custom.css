@@ -47,3 +47,42 @@ Custom Rules
 joomla-alert .alert-heading {
 	display: none;
 }
+
+/* Fix Joomla 6 pagination display */
+.pagination__wrapper {
+	display: inline-block;
+	white-space: nowrap;
+}
+
+.pagination__wrapper ul {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+}
+
+.pagination__wrapper ul li {
+	display: inline-block;
+	margin: 0 2px;
+}
+
+/* Show pagination icons using text fallback */
+.pagination__wrapper .icon-angle-double-left:before {
+	content: "«";
+	font-size: 16px;
+}
+
+.pagination__wrapper .icon-angle-double-right:before {
+	content: "»";
+	font-size: 16px;
+}
+
+.pagination__wrapper .icon-angle-left:before {
+	content: "‹";
+	font-size: 16px;
+}
+
+.pagination__wrapper .icon-angle-right:before {
+	content: "›";
+	font-size: 16px;
+}
