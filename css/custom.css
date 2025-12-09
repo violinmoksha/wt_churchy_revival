@@ -42,3 +42,8 @@ Custom Rules
 	-khtml-border-radius: 3px;
 	border-radius: 3px;
 }
+
+/* Hide alert-heading in contact form success messages */
+joomla-alert .alert-heading {
+	display: none;
+}

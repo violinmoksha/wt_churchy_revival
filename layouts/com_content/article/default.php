@@ -180,8 +180,8 @@ if (isset($images->image_fulltext) and !empty($images->image_fulltext)) {
 		?>
 		</div>
 
-		<?php if ($params->get('show_tags', 1) && !empty($this->item->tags)) : ?>
-			<?php $this->item->tagLayout = new JLayoutFile('joomla.content.tags'); ?>
+		<?php if ($params->get('show_tags', 1) && !empty($this->item->tags->itemTags)) : ?>
+			<?php $this->item->tagLayout = new Joomla\CMS\Layout\FileLayout('joomla.content.tags'); ?>
 			<?php echo $this->item->tagLayout->render($this->item->tags->itemTags); ?>
 		<?php endif; ?>
 

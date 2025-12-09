@@ -10,7 +10,7 @@ defined('_JEXEC') or die;
 
 ?>
 
-<?php if (JPluginHelper::isEnabled('user', 'profile')) : ?>
+<?php if (Joomla\CMS\Plugin\PluginHelper::isEnabled('user', 'profile')) : ?>
 <?php $fields = $this->item->profile->getFieldset('profile'); ?>
 <ul class="blank">
 <?php foreach ($fields as $profile) : ?>

@@ -95,7 +95,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 				<tr class="<?php if ($i % 2 == 1) { echo 'even'; } else { echo 'odd'; } ?>">
 
 					<td class="item-title">
-						<a href="<?php echo JRoute::_(ContactHelperRoute::getContactRoute($item->slug, $item->catid)); ?>"><?php echo $item->name; ?></a>
+						<a href="<?php echo JRoute::_(Joomla\Component\Contact\Site\Helper\RouteHelper::getContactRoute($item->slug, $item->catid)); ?>"><?php echo $item->name; ?></a>
 					</td>
 
 					<?php if ($this->params->get('show_position_headings')) : ?>

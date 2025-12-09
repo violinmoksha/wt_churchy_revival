@@ -14,8 +14,8 @@ defined('_JEXEC') or die;
 <?php foreach(range('a', 'e') as $char) : ?>
 
 	<?php
-		$link = $this->contact->params->get('link'.$char);
-		$label = $this->contact->params->get('link'.$char.'_name');
+		$link = $this->item->params->get('link'.$char);
+		$label = $this->item->params->get('link'.$char.'_name');
 
 		if( ! $link) continue;
 

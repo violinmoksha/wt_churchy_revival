@@ -16,7 +16,7 @@ defined('_JEXEC') or die;
 	<?php foreach($this->items[$this->parent->id] as $id => $item) : ?>
 		<?php if ($this->params->get('show_empty_categories_cat') || $item->numitems || count($item->getChildren())) : ?>
 		<li>
-			<a href="<?php echo JRoute::_(ContactHelperRoute::getCategoryRoute($item->id));?>"><?php echo $this->escape($item->title); ?></a>
+			<a href="<?php echo JRoute::_(Joomla\Component\Contact\Site\Helper\RouteHelper::getCategoryRoute($item->id));?>"><?php echo $this->escape($item->title); ?></a>
 	
 			<?php if ($this->params->get('show_cat_items_cat') == 1) : ?>
 			<small>(<?php echo $item->numitems; ?>)</small>

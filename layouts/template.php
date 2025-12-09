@@ -44,7 +44,7 @@ include($this['path']->path('layouts:template.config.php'));
 		</div>
 		<?php endif; ?>
 		<div id="headerbar" class="clearfix">
-			<?php if ($this['modules']->count('logo + headerbar')) : ?>
+			<?php if ($this['modules']->count('logo')) : ?>
 			<div id="header_wrapper">
 				<div class="wrapper clearfix">
 					<div id="logo" class="float-left"><a href="<?php echo $this['config']->get('site_url'); ?>"><?php echo $this['modules']->render('logo'); ?></a></div>

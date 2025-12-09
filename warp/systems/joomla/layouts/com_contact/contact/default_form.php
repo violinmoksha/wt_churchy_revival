@@ -8,9 +8,9 @@
 
 defined('_JEXEC') or die;
 
-JHtml::_('behavior.keepalive');
-JHtml::_('behavior.formvalidation');
-JHtml::_('bootstrap.tooltip');
+$wa = $this->getDocument()->getWebAssetManager();
+$wa->useScript('keepalive')
+    ->useScript('form.validate');
 ?>
 
 <?php if (isset($this->error)) : ?>
@@ -77,7 +77,7 @@ JHtml::_('bootstrap.tooltip');
 	<input type="hidden" name="option" value="com_contact" />
 	<input type="hidden" name="task" value="contact.submit" />
 	<input type="hidden" name="return" value="<?php echo $this->return_page;?>" />
-	<input type="hidden" name="id" value="<?php echo $this->contact->slug; ?>" />
+	<input type="hidden" name="id" value="<?php echo $this->item->slug; ?>" />
 	<?php echo JHtml::_( 'form.token' ); ?>
 </form>
 

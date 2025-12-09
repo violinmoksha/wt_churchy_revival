@@ -29,7 +29,7 @@ defined('_JEXEC') or die;
 	<?php endif; ?>
 
 	<?php if ($this->params->get('show_tags', 1)) : ?>
-		<?php $this->item->tagLayout = new JLayoutFile('joomla.content.tags'); ?>
+		<?php $this->item->tagLayout = new Joomla\CMS\Layout\FileLayout('joomla.content.tags'); ?>
 		<?php echo $this->item->tagLayout->render($this->item->tags->itemTags); ?>
 	<?php endif; ?>
 
