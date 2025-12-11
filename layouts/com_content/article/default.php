@@ -49,11 +49,19 @@ if (isset($images->image_fulltext) and !empty($images->image_fulltext)) {
 
 			<?php if (!$this->print) : ?>
 				<?php if ($params->get('show_email_icon')) : ?>
-				<div class="icon email"><?php echo JHtml::_('icon.email',  $this->item, $params); ?></div>
+				<div class="icon email">
+					<a href="mailto:?subject=<?php echo rawurlencode($this->item->title); ?>&body=<?php echo rawurlencode(JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid), true, -1)); ?>" title="Email this article">
+						<span class="icon-envelope" aria-hidden="true">&nbsp;Email</span>
+					</a>
+				</div>
 				<?php endif; ?>
 
 				<?php if ($params->get('show_print_icon')) : ?>
-				<div class="icon print"><?php echo JHtml::_('icon.print_popup',  $this->item, $params); ?></div>
+				<div class="icon print">
+					<a href="#" onclick="window.print(); return false;" title="Print this article">
+						<span class="icon-print" aria-hidden="true">&nbsp;Print</span>
+					</a>
+				</div>
 				<?php endif; ?>
 			<?php else : ?>
 				<div class="icon printscreen"><?php echo JHtml::_('icon.print_screen',  $this->item, $params); ?></div>

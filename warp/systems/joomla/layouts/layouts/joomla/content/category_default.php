@@ -37,7 +37,7 @@ $tagsData  = $displayData->get('category')->tags->itemTags;
 <?php echo $displayData->loadTemplate($displayData->subtemplatename); ?>
 
 <?php if ($displayData->get('show_tags', 1)) : ?>
-	<?php echo JLayoutHelper::render('joomla.content.tags', $tagsData); ?>
+	<?php echo Joomla\CMS\Layout\LayoutHelper::render('joomla.content.tags', $tagsData); ?>
 <?php endif; ?>
 
 <?php if ($displayData->get('children') && $displayData->maxLevel != 0) : ?>

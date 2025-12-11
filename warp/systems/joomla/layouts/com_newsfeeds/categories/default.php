@@ -16,7 +16,7 @@ JHtml::_('behavior.caption');
 
 <div id="system">
 	
-	<?php echo JLayoutHelper::render('joomla.content.categories_default', $this); ?>
+	<?php echo Joomla\CMS\Layout\LayoutHelper::render('joomla.content.categories_default', $this); ?>
 	<?php echo $this->loadTemplate('items'); ?>
 
 </div>

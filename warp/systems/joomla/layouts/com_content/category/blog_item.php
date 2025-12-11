@@ -35,14 +35,6 @@ if (isset($images->image_intro) and !empty($images->image_intro)) {
 	<?php if ($params->get('show_title')) : ?>
 	<header>
 
-		<?php if ($params->get('show_email_icon')) : ?>
-		<div class="icon email"><?php echo JHtml::_('icon.email', $this->item, $params); ?></div>
-		<?php endif; ?>
-	
-		<?php if ($params->get('show_print_icon')) : ?>
-		<div class="icon print"><?php echo JHtml::_('icon.print_popup', $this->item, $params); ?></div>
-		<?php endif; ?>
-	
 		<h1 class="title">
 			<?php if ($params->get('link_titles') && $params->get('access-view')) : ?>
 				<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid)); ?>" title="<?php echo $this->escape($this->item->title); ?>"><?php echo $this->escape($this->item->title); ?></a>

@@ -14,6 +14,6 @@ defined('_JEXEC') or die;
 <div id="system">
 
 	<?php $this->subtemplatename = 'items'; ?>
-	<?php echo JLayoutHelper::render('joomla.content.category_default', $this); ?>
+	<?php echo Joomla\CMS\Layout\LayoutHelper::render('joomla.content.category_default', $this); ?>
 
 </div>
