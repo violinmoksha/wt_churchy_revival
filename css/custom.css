@@ -96,3 +96,8 @@ joomla-alert .alert-heading {
     display: inline-block;
     margin-right: 0.5rem;
 }
+
+/* Fix img margins in articles */
+#content.grid-block img {
+	margin: 1rem !important;
+}
