@@ -86,3 +86,13 @@ joomla-alert .alert-heading {
 	content: "›";
 	font-size: 16px;
 }
+
+/* Fix tags list-inline display */
+.tags.list-inline {
+	margin-top: 35px;
+}
+
+.tags.list-inline li {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
