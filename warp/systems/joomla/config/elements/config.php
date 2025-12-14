@@ -12,7 +12,7 @@ defined('_JEXEC') or die('Restricted access');
 jimport('joomla.html.html');
 jimport('joomla.form.formfield');
 
-class JFormFieldConfig extends JFormField {
+class JFormFieldConfig extends \Joomla\CMS\Form\FormField {
 
 	protected $type = 'Config';
 
@@ -41,7 +41,7 @@ class JFormFieldConfig extends JFormField {
 		$target = JPATH_ROOT.'/administrator/templates/system/warp-ajax.php';
 
 		if (!file_exists($target) || md5_file($source) != md5_file($target)) {
-			JFile::copy($source, $target);
+			copy($source, $target);
 		}
 
 	}
