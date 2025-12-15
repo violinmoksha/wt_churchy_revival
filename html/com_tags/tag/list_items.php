@@ -28,6 +28,7 @@ if (!class_exists('JText')) {
 	class_alias('Joomla\CMS\Language\Text', 'JText');
 }
 
+require_once JPATH_COMPONENT.'/helpers/route.php';
 // \Joomla\CMS\HTML\HTMLHelper::_('behavior.framework');
 
 $n			= count($this->items);
@@ -105,7 +106,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 				<?php endif; ?>
 
 					<td>
-						<a href="<?php echo \Joomla\CMS\Router\Route::_(\Joomla\CMS\Helper\TagsHelperRoute::getItemRoute($item->content_item_id, $item->core_alias, $item->core_catid, $item->core_language, $item->type_alias, $item->router)); ?>"><?php echo $this->escape($item->core_title); ?></a>
+						<a href="<?php echo \Joomla\CMS\Router\Route::_(TagsHelperRoute::getItemRoute($item->content_item_id, $item->core_alias, $item->core_catid, $item->core_language, $item->type_alias, $item->router)); ?>"><?php echo $this->escape($item->core_title); ?></a>
 					</td>
 
 					<?php if ($this->params->get('tag_list_show_date')) : ?>

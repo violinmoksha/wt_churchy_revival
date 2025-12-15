@@ -30,17 +30,17 @@ if (!class_exists('JText')) {
 }
 
 \Joomla\CMS\HTML\HTMLHelper::addIncludePath(JPATH_COMPONENT.'/helpers');
-$n = count($this->items);
+require_once JPATH_COMPONENT.'/helpers/route.php';
 
 ?>
 
 <div id="system">
 
-	<?php  if ($this->params->get('show_page_heading')) : ?>
+	<?php if ($this->params->get('show_page_heading')) : ?>
 	<h1 class="title"><?php echo $this->escape($this->params->get('page_heading')); ?></h1>
-	<?php endif;  ?>
+	<?php endif; ?>
 
-	<?php if($this->params->get('show_tag_title', 1)) : ?>
+	<?php if ($this->params->get('show_tag_title', 1)) : ?>
 	<h2 class="subtitle">Articles Tagged ‘<?php echo \Joomla\CMS\HTML\HTMLHelper::_('content.prepare', $this->document->title, '', 'com_tag.tag'); ?>’</h2>
 	<?php endif; ?>
 

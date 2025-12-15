@@ -21,14 +21,12 @@ if (!class_exists('JUri')) {
 if (!class_exists('JRoute')) {
 	class_alias('Joomla\CMS\Router\Route', 'JRoute');
 }
-if (!class_exists('TagsHelperRoute')) {
-	class_alias('Joomla\CMS\Helper\TagsHelperRoute', 'TagsHelperRoute');
-}
 if (!class_exists('JText')) {
 	class_alias('Joomla\CMS\Language\Text', 'JText');
 }
 
 \Joomla\CMS\HTML\HTMLHelper::addIncludePath(JPATH_COMPONENT.'/helpers');
+require_once JPATH_COMPONENT.'/helpers/route.php';
 // \Joomla\CMS\HTML\HTMLHelper::_('bootstrap.tooltip');
 // \Joomla\CMS\HTML\HTMLHelper::_('behavior.framework');
 
@@ -86,7 +84,7 @@ $n = count($this->items);
 		<article class="item">
 
 			<?php if ($item->core_state != 0) : ?>
-			<h1 class="title"><a href="<?php echo \Joomla\CMS\Router\Route::_(\Joomla\CMS\Helper\TagsHelperRoute::getItemRoute($item->content_item_id, $item->core_alias, $item->core_catid, $item->core_language, $item->type_alias, $item->router)); ?>"><?php echo $this->escape($item->core_title); ?></a></h1>
+			<h1 class="title"><a href="<?php echo \Joomla\CMS\Router\Route::_(\TagsHelperRoute::getItemRoute($item->content_item_id, $item->core_alias, $item->core_catid, $item->core_language, $item->type_alias, $item->router)); ?>"><?php echo $this->escape($item->core_title); ?></a></h1>
 			<?php endif; ?>
 
 			<?php $images  = json_decode($item->core_images);?>

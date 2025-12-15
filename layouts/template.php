@@ -172,7 +172,64 @@ include($this['path']->path('layouts:template.config.php'));
 				</div>
 				<!-- maininner end -->
 				<?php if ($this['modules']->count('sidebar-a')) : ?>
-				<aside id="sidebar-a" class="grid-box"><?php echo $this['modules']->render('sidebar-a', array('layout'=>'stack')); ?></aside>
+				<aside id="sidebar-a" class="grid-box">
+					<?php
+					// Custom Popular Tags Section
+					$db = \Joomla\CMS\Factory::getDbo();
+					$user = \Joomla\CMS\Factory::getUser();
+					$groups = implode(',', $user->getAuthorisedViewLevels());
+					$maximum = 5; // Number of popular tags to show
+					$nowDate = \Joomla\CMS\Factory::getDate()->toSql();
+					$nullDate = $db->quote($db->getNullDate());
+
+					$query = $db->getQuery(true)
+						->select(
+							array(
+								'MAX(' . $db->quoteName('tag_id') . ') AS tag_id',
+								' COUNT(*) AS count', 'MAX(t.title) AS title',
+								'MAX(' . $db->quoteName('t.access') . ') AS access',
+								'MAX(' . $db->quoteName('t.alias') . ') AS alias',
+								'MAX(' . $db->quoteName('t.params') . ') AS params',
+							)
+						)
+						->group($db->quoteName(array('tag_id', 'title', 'access', 'alias')))
+						->from($db->quoteName('#__contentitem_tag_map', 'm'))
+						->where($db->quoteName('t.access') . ' IN (' . $groups . ')')
+						->where($db->quoteName('t.published') . ' = 1 ')
+						->join('INNER', $db->quoteName('#__tags', 't') . ' ON ' . $db->quoteName('tag_id') . ' = t.id')
+						->join('INNER', $db->qn('#__ucm_content', 'c') . ' ON ' . $db->qn('m.core_content_id') . ' = ' . $db->qn('c.core_content_id'))
+						->where($db->quoteName('m.type_alias') . ' = ' . $db->quoteName('c.core_type_alias'))
+						->where($db->quoteName('c.core_state') . ' = 1')
+						->where('(' . $db->quoteName('c.core_access') . ' IN (' . $groups . ') OR ' . $db->quoteName('c.core_access') . ' = 0)')
+						->where('(' . $db->quoteName('c.core_publish_up') . ' = ' . $nullDate
+							. ' OR ' . $db->quoteName('c.core_publish_up') . ' <= ' . $db->quote($nowDate) . ')')
+						->where('(' . $db->quoteName('c.core_publish_down') . ' = ' . $nullDate
+							. ' OR  ' . $db->quoteName('c.core_publish_down') . ' >= ' . $db->quote($nowDate) . ')')
+						->order('count DESC');
+
+					$db->setQuery($query, 0, $maximum);
+
+					try {
+						$popularTags = $db->loadObjectList();
+					} catch (RuntimeException $e) {
+						$popularTags = array();
+						\Joomla\CMS\Factory::getApplication()->enqueueMessage($e->getMessage(), 'error');
+					}
+
+					if (!empty($popularTags)) {
+						echo '<div class="module mod-box deepest">';
+						echo '<h3 class="module-title">Popular Tags</h3>';
+						echo '<ul class="tags">';
+						foreach ($popularTags as $tag) {
+							$link = \Joomla\CMS\Router\Route::_(\Joomla\CMS\Helper\TagsHelperRoute::getTagRoute($tag->tag_id . ':' . $tag->alias));
+							echo '<li><a href="' . $link . '">' . htmlspecialchars($tag->title) . ' (' . $tag->count . ')</a></li>';
+						}
+						echo '</ul>';
+						echo '</div>';
+					}
+					?>
+					<?php echo $this['modules']->render('sidebar-a', array('layout'=>'stack')); ?>
+				</aside>
 				<?php endif; ?>
 				<?php if ($this['modules']->count('sidebar-b')) : ?>
 				<aside id="sidebar-b" class="grid-box"><?php echo $this['modules']->render('sidebar-b', array('layout'=>'stack')); ?></aside>

@@ -30,6 +30,7 @@ if (!class_exists('JText')) {
 }
 
 \Joomla\CMS\HTML\HTMLHelper::addIncludePath(JPATH_COMPONENT.'/helpers');
+require_once JPATH_COMPONENT.'/helpers/route.php';
 $n = count($this->items);
 
 ?>
