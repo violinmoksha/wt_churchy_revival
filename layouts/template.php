@@ -15,6 +15,14 @@ include($this['path']->path('layouts:template.config.php'));
 <html lang="<?php echo $this['config']->get('language'); ?>" dir="<?php echo $this['config']->get('direction'); ?>">
 <head>
 <?php echo $this['template']->render('head'); ?>
+<link rel="apple-touch-icon" sizes="180x180" href="/templates/wt_churchy_revival/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/templates/wt_churchy_revival/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/templates/wt_churchy_revival/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/templates/wt_churchy_revival/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/templates/wt_churchy_revival/android-chrome-512x512.png">
+<link rel="manifest" href="/templates/wt_churchy_revival/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
 </head>
 
 <body id="page" class="page <?php echo $this['config']->get('body_classes'); ?>" data-config='<?php echo $this['config']->get('body_config','{}'); ?>'>
